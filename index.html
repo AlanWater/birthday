@@ -107,6 +107,7 @@
 
 </head>
 
+<!-- <body onclick="playAudio()" onload="clickBody()"> -->
 <body>
 <!--&lt;!&ndash;更改为你女朋友的头像&ndash;&gt;-->
 <div class="cs">
@@ -119,7 +120,18 @@
 <div class="text" style="color: #f42020;">
     我们已相识：<span id="span_dt_dt2"></span>
 </div>
+<!--//音乐可改-->
+<audio autoplay="autoplay" loop="loop">
+    <source src="./piono.mp3" type="audio/mp3">
+</audio>
 <script language="javascript">
+    function clickBody() {
+        document.body.click();
+    }
+    // function playAudio() {
+    //     let audio = document.querySelector('audio');     
+    //     audio.play();
+    // }
     function show_date_time(dom, startTime) {
         window.setTimeout(function() {
             show_date_time(dom, startTime);
@@ -605,9 +617,5 @@
     }());
     S.init();
 </script>
-<!--//音乐可改-->
-<audio autoplay="autoplay" loop="loop">
-    <source src="./piono.mp3" type="audio/mp3">
-</audio>
 </body>
 </html>
